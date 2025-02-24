@@ -1,0 +1,25 @@
+{
+  "name": "programacaoparainternetfacul",
+  "version": "1.0.0",
+  "description": "backend da aplicação de cadastro de cliente",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianocamposcode/programacaoParaInternetFacul.git"
+  },
+  "keywords": [
+    "API",
+    "backend",
+    "MVC",
+    "REST"
+  ],
+  "author": "Juliano campos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianocamposcode/programacaoParaInternetFacul/issues"
+  },
+  "homepage": "https://github.com/julianocamposcode/programacaoParaInternetFacul#readme"
+}
