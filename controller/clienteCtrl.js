@@ -2,7 +2,7 @@
 //Requisições HTTP: GET POST PUT DELETE
 //Requisição e resposta
 
-import Cliente from "../model/cliente"
+import Cliente from "../model/cliente.js"
 
 export default class ClienteCtrl {
     // PUT
