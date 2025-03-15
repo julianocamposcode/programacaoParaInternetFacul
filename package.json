@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/julianocamposcode/programacaoParaInternetFacul#readme",
   "dependencies": {
+    "express": "^4.21.2",
     "mysql2": "^3.12.0"
   }
 }
