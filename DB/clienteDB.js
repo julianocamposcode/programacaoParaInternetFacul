@@ -105,4 +105,26 @@ export default class ClienteDB {
         }
         return clientes
     }
+
+    async consultarPorCpf(cpf) {
+        const conexao = await conectar()
+        const sql = `SELECT * FROM cliente WHERE cpf = ?`
+        const [linhas, campos] = await conexao.execute(sql, [cpf])
+        await conexao.release()
+        const clientes = []
+        for (const linha of linhas) {
+            const cliente = new Cliente(
+                linha.cpf,
+                linha.nome,
+                linha.endereco,
+                linha.bairro,
+                linha.cidade,
+                linha.uf,
+                linha.telefone,
+                linha.email
+            )
+            clientes.push(cliente)
+        }
+        return clientes
+    }
 }

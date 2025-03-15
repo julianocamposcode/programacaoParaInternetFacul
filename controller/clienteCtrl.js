@@ -61,7 +61,7 @@ export default class ClienteCtrl {
             const email = dados.email
             if (cpf && nome && endereco && bairro && cidade && uf && telefone && email) {
                 const cliente = new Cliente(cpf, nome, endereco, bairro, cidade, uf, telefone, email)
-                cliente.alterar().then(() => {
+                cliente.editar().then(() => {
                     resposta.status(201).json({
                         "status": true,
                         "mensagem": "Cliente alterado com sucesso"
@@ -118,18 +118,34 @@ export default class ClienteCtrl {
     consultar(resquisicao, resposta) {
         if (resquisicao.method === 'GET') {
             const cliente = new Cliente();
-            cliente.consultar().then((listaCLientes) => {
-                resposta.status(200).json({
-                    "status": true,
-                    "clientes": listaCLientes
-                })
 
-            }).catch(erro => {
-                resposta.status(500).json({
-                    "status": false,
-                    "mensagem": "Erro ao consultar o cliente" + erro
+            if (resquisicao.params.cpf) {
+                cliente.consultarPorCpf(resquisicao.params.cpf).then((listaCLientes) => {
+                    resposta.status(200).json({
+                        "status": true,
+                        "clientes": listaCLientes
+                    })
+
+                }).catch(erro => {
+                    resposta.status(500).json({
+                        "status": false,
+                        "mensagem": "Erro ao consultar o clienteCPF" + erro
+                    })
                 })
-            })
+            } else {
+                cliente.consultar().then((listaCLientes) => {
+                    resposta.status(200).json({
+                        "status": true,
+                        "clientes": listaCLientes
+                    })
+
+                }).catch(erro => {
+                    resposta.status(500).json({
+                        "status": false,
+                        "mensagem": "Erro ao consultar o cliente" + erro
+                    })
+                })
+            }
         } else {
             resposta.status(400).json({
                 "status": false,

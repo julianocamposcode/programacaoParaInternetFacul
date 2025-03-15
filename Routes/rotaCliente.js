@@ -5,6 +5,7 @@ const rotaCLiente = Router(); // mini aplicação http
 
 const cliCtrl = new ClienteCtrl()
 
+rotaCLiente.get('/:cpf', cliCtrl.consultar)
 rotaCLiente.get('/', cliCtrl.consultar)
 rotaCLiente.post('/', cliCtrl.gravar)
 rotaCLiente.put('/', cliCtrl.alterar)

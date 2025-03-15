@@ -103,5 +103,9 @@ export default class Cliente {
         const cliDB = new ClienteDB()
         return await cliDB.consultar()
     }
+    async consultarPorCpf(cpf) {
+        const cliDB = new ClienteDB()
+        return await cliDB.consultarPorCpf(cpf)
+    }
 
 }
