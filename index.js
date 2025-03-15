@@ -13,11 +13,11 @@ var cliente = new Cliente(
 //gravar o cliente no banco de dados 
 //resolvendo os métodos assíncronos s
 
-// cliente.gravar().then(() => {
-//     console.log('Cliente gravado com sucesso')
-// }).catch((erro) => {
-//     console.log(`Erro ao gravar o cliente ${erro}`)
-// })
+cliente.gravar().then(() => {
+    console.log('Cliente gravado com sucesso')
+}).catch((erro) => {
+    console.log(`Erro ao gravar o cliente ${erro}`)
+})
 cliente.consultar().then(listaCLientes => {
     for (const cliente of listaCLientes) {
         console.log(cliente.toJSON())
