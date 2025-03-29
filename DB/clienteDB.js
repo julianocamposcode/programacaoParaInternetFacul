@@ -84,11 +84,11 @@ export default class ClienteDB {
             await conexao.release()
         }
     }
-    async consultar() {
+    async consultar() { 
         const conexao = await conectar()
         const sql = `SELECT * FROM cliente ORDER BY nome`
         const [linhas, campos] = await conexao.execute(sql)
-        await conexao.release()
+        await conexao.release() 
         const clientes = []
         for (const linha of linhas) {
             const cliente = new Cliente(

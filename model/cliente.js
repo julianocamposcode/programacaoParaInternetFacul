@@ -22,6 +22,7 @@ export default class Cliente {
         this.uf = uf
         this.telefone = telefone
         this.email = email
+
     }
 
     get cpf() { //pegar

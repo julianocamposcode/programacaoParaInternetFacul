@@ -27,7 +27,7 @@ export default class ClienteCtrl {
                     })
                 }).catch((erro) => {
                     resposta.status(500).json({
-                        "status": false,
+                        "status": false,    
                         "mensagem": "Erro ao gravar o cliente" + erro
                     })
                 })
