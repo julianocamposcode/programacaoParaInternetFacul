@@ -6,7 +6,227 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>bem vindo ao sistemaa</h1>
-    <a href="./buscadorNomes.html">buscadorNomes</a>
+    <style>
+      h1 {
+        text-align: center;
+        padding-block: 3rem;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(143, 141, 141);
+        padding: 14px 5px;
+        display: block;
+      }
+      li:hover {
+        color: white;
+        cursor: pointer;
+      }
+
+      section {
+        display: flex;
+        justify-content: center;
+      }
+
+      form {
+        margin-top: 5rem;
+        background: #333;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 3rem;
+        border-radius: 10px;
+        color: white;
+        width: 70rem;
+      }
+      .container-form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      input {
+        margin: 1rem;
+        padding: 0.5rem;
+        outline: none;
+        width: 90%;
+      }
+
+      input[type="submit"] {
+        border-radius: 7px;
+        width: 30%;
+        border: none;
+      }
+
+      input[type="submit"]:hover {
+        background-color: rgb(115, 120, 126);
+        color: white;
+      }
+
+      .campos {
+        border-radius: 5px;
+        border: none;
+      }
+
+      #chek {
+        margin-block: 2rem;
+      }
+
+      .yes_no {
+        margin: 0.2rem;
+      }
+
+      h1 {
+        padding: 1rem;
+      }
+
+      .item {
+        list-style: none;
+        position: relative;
+        padding: 1rem 2rem;
+        border: 1px outset white;
+        display: flex;
+        gap: 3rem;
+        margin: 1rem;
+        align-items: center;
+        color: white;
+      }
+
+      p {
+        margin: 0 !important;
+      }
+
+      h4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+      }
+      h4 a {
+        text-decoration: none;
+        color: white;
+      }
+
+      @media screen and (max-width: 500px) {
+        form {
+          padding: 1rem;
+          width: 87%;
+        }
+      }
+    </style>
+    <nav>
+      <ul>
+        <a href="/index.html"><li>Home</li></a>
+      </ul>
+    </nav>
+
+
+    <section>
+      <form method="POST" action="login">
+        <h1>Cadastrar um Cliente</h1>
+        <section class="container-form">
+          <div>
+            <label for="" id="nome">Nome:</label>
+            <input
+              id="nome"
+              name="nome"
+              class="campos"
+              type="text"
+              required
+              placeholder="Seu nome..."
+            />
+          </div>
+          <div>
+            <label for="" id="cpf">Cpf:</label>
+            <input
+              id="cpf"
+              class="campos"
+              name="cpf"
+              type="text"
+              placeholder="***.***.***-**"
+            />
+          </div>
+          <div>
+            <label for="" id="endereco">Endereço:</label>
+            <input
+              id="endereco"
+              class="campos"
+              name="endereco"
+              type="text"
+              placeholder="***.***.***-**"
+            />
+          </div>
+          <div>
+            <label for="" id="bairro">Bairro:</label>
+            <input
+              id="bairro"
+              class="campos"
+              name="bairro"
+              type="text"
+              placeholder="***.***.***-**"
+            />
+          </div>
+          <div>
+            <label for="" id="cidade">Cidade:</label>
+            <input
+              id="cidade"
+              class="campos"
+              name="cidade"
+              type="text"
+              placeholder="***.***.***-**"
+            />
+          </div>
+          <div>
+            <label for="" id="uf">UF:</label>
+            <input
+              id="uf"
+              class="campos"
+              name="uf"
+              type="text"
+              placeholder="***.***.***-**"
+            />
+          </div>
+          <div>
+            <label for="" id="tel">Telefone:</label>
+            <input
+              id="tel"
+              class="campos"
+              name="tel"
+              type="tel"
+              placeholder="***.***.***-**"
+            />
+          </div>
+          <div>
+            <label for="" id="email">Email:</label>
+            <input
+              id="email"
+              class="campos"
+              name="email"
+              type="email"
+              placeholder="***.***.***-**"
+            />
+          </div>
+        </section>
+        <input type="submit" value="cadastrar" class="enviar" />
+      </form>
+    </section>
+    <script>
+    </script>
   </body>
 </html>
